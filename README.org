@@ -1,0 +1,34 @@
+#+TITLE: markdown-tufte layer
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#key-bindings][Key bindings]]
+
+* Description
+
+This layer adds tufte sidenote/marginnote editing support. The syntax of Tufte used
+is from [[https://github.com/siawyoung/immaculate][Immaculate]].
+
+- Make sidenote/marginnote smaller and lighter in grey color (so it works with
+  solarized light theme I am using)
+- Add keybinding for easy sidenote/marginnote block insertion.
+
+
+*WARNING* Still this is just a quick hack, like its color theme only works with
+=solairzed light=. I do not have many improvement ideas. Maybe the color setting
+needs to be more dynamic to adapt to more themes. Another idea is to borrow
+something from [[https://github.com/clayh53/tufte-jekyll][tufte-jekyll]], which looks a bit more popular.
+
+* Install
+  To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+  add =markdown-tufte= to the existing =dotspacemacs-configuration-layers= list in this
+  file.
+
+* Key bindings
+
+| Key Binding | Description             |
+|-------------+-------------------------|
+| ~SPC m x s~ | Insert Sidenote block   |
+| ~SPC m x m~ | Insert Marginnote blcok |
