@@ -22,9 +22,12 @@ needs to be more dynamic to adapt to more themes. Another idea is to borrow
 something from [[https://github.com/clayh53/tufte-jekyll][tufte-jekyll]], which looks a bit more popular.
 
 * Install
-  To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-  add =markdown-tufte= to the existing =dotspacemacs-configuration-layers= list in this
-  file.
+  To use this layer first clone it into your ~/.emacs.d/private directory:
+
+  : git clone https://github.com/carltonf/markdown-tufte.git ~/.emacs.d/private/markdown-tufte
+
+  Then, add it to your =~/.spacemacs=. You will need to add =markdown-tufte= to
+  the existing =dotspacemacs-configuration-layers= list in this file.
 
 * Key bindings
 
