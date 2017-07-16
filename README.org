@@ -5,6 +5,7 @@
  - [[#description][Description]]
  - [[#install][Install]]
  - [[#key-bindings][Key bindings]]
+ - [[#tips--tricks][Tips & Tricks]]
 
 * Description
 
@@ -28,10 +29,24 @@ something from [[https://github.com/clayh53/tufte-jekyll][tufte-jekyll]], which 
 
   Then, add it to your =~/.spacemacs=. You will need to add =markdown-tufte= to
   the existing =dotspacemacs-configuration-layers= list in this file.
-
 * Key bindings
 
 | Key Binding | Description             |
 |-------------+-------------------------|
 | ~SPC m x s~ | Insert Sidenote block   |
 | ~SPC m x m~ | Insert Marginnote blcok |
+
+* Tips & Tricks
+	Font locking might have troubles dealing with complicated block upon file
+	loading, like the one below:
+
+  #+BEGIN_SRC markdown
+	{% sidenote sn-big-words [*"Words are
+	wind~"*](http://www.thefrisky.com/2012-05-16/12-words-and-phrases-from-game-of-thrones-that-need-to-be-part-of-your-vocabulary/)
+	%}
+  #+END_SRC
+
+  As there is a link within, run "M-o M-o" to font-lock refreshing the highlighting.
+
+  Generally I don't think this is a problem of =markdown-tufte=, but it might
+  have something to do with the inefficient =regexp= used for syntax matching.
